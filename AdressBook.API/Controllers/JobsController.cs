@@ -2,6 +2,7 @@
 using AdressBook.Domain.ViewModels.Employee;
 using AdressBook.Services.IServices;
 using AdressBook.Services.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -9,6 +10,7 @@ namespace AdressBook.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class JobsController : ControllerBase
     {
         private readonly IJobService _jobService;
